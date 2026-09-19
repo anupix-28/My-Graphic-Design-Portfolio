@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+    background-color: #f8f8f5;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* MAIN HERO */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 30px);
+    overflow: hidden;
+}
+
+/* PORTFOLIO TEXT */
+
+.portfolio-text {
+    position: absolute;
+
+    top: 10%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-family: "Anton", sans-serif;
+    font-size: clamp(100px, 12vw, 230px);
+    line-height: 0.9;
+
+    color: #00d800;
+
+    white-space: nowrap;
+
+    z-index: 1;
+}
+
+
+/* PERSON */
+
+.person {
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    height: 90%;
+    width: auto;
+
+    object-fit: contain;
+
+    z-index: 2;
+}
+
+
+/* DEVELOPER / DESIGNER */
+
+.role {
+    position: absolute;
+
+    top: 54%;
+
+    font-family: "Anton", sans-serif;
+    font-size: clamp(50px, 4.5vw, 90px);
+
+    color: #292929;
+
+    text-decoration: none;
+
+    z-index: 3;
+
+    transition: color 0.2s ease,
+                transform 0.2s ease;
+}
+
+
+/* Developer */
+
+.developer {
+    left: 6.5%;
+}
+
+
+/* Designer */
+
+.designer {
+    right: 6.5%;
+}
+
+
+/* Hover */
+
+.role:hover {
+    color: #00d800;
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    width: 100%;
+    height: 30px;
+
+    background-color: #292929;
+    border-radius: 30px 30px 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .portfolio-text {
+        font-size: 18vw;
+        top: 5%;
+    }
+
+    .person {
+        height: 85%;
+    }
+
+    .role {
+        top: 55%;
+        font-size: 6vw;
+    }
+
+    .developer {
+        left: 3%;
+    }
+
+    .designer {
+        right: 3%;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow: hidden;
+    }
+
+    .hero {
+        height: calc(100vh - 55px);
+    }
+
+    .portfolio-text {
+        top: 8%;
+        font-size: 24vw;
+    }
+
+    .person {
+        height: 70%;
+    }
+
+    .role {
+        top: 55%;
+        font-size: 8vw;
+    }
+
+    .developer {
+        left: 2%;
+    }
+
+    .designer {
+        right: 2%;
+    }
+
+    footer {
+        height: 55px;
+        border-radius: 25px 25px 0 0;
+    }
+
+    footer p {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+}
